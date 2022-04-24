@@ -1,0 +1,29 @@
+#!/bin/bash
+
+echo "Welcome!"
+
+echo "We will print the larger of the three numbers you enter..."
+
+a=0
+b=0
+c=0
+largestnumber=0
+
+read -p "Please enter the 1st number:" a
+read -p "Please enter the 2st number:" b
+read -p "Please enter the 1st number:" c
+
+    if [ $a -gt $b ] && [ $a -gt $c ]
+      then
+      largestnumber=$a
+
+    elif  [ $b -gt  $c ] && [ $b -gt $a ]
+      then
+      largestnumber=$b
+
+    else [ $c -gt $a ] && [ $c -gt $b ]
+      largestnumber=$c
+
+    fi
+
+echo "Biggest Number: $largestnumber"
